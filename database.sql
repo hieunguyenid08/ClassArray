@@ -1,30 +1,30 @@
 CREATE DATABASE `database`;
 USE `DATABASE`;
 CREATE TABLE `Role` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(20)
 );
 
 CREATE TABLE `User` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `fullname` varchar(50),
   `email` varchar(150),
   `phone_number` varchar(20),
   `address` varchar(200),
-  `account` varchar(50),
-  `pass` varchar(32),
+  `username` varchar(50) NOT NULL UNIQUE,
+  `pass` varchar(32) NOT NULL,
   `role_id` int,
   `created_at` datetime,
   `updated_at` datetime
 );
 
 CREATE TABLE `category` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(100)
 );
 
 CREATE TABLE `product` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `category_id` int,
   `title` varchar(350),
   `price` int,
@@ -36,13 +36,13 @@ CREATE TABLE `product` (
 );
 
 CREATE TABLE `galery` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `product_id` int,
   `thumbnail` varchar(500)
 );
 
 CREATE TABLE `feedback` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `fullname` varchar(50),
   `email` varchar(150),
   `phone_number` varchar(20),
@@ -51,7 +51,7 @@ CREATE TABLE `feedback` (
 );
 
 CREATE TABLE `order` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
   `fullname` varchar(50),
   `email` varchar(150),
@@ -64,7 +64,7 @@ CREATE TABLE `order` (
 );
 
 CREATE TABLE `order_detail` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `order_id` int,
   `product_id` int,
   `price` int,

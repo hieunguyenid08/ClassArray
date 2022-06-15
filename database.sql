@@ -12,7 +12,7 @@ CREATE TABLE `User` (
   `phone_number` varchar(20),
   `address` varchar(200),
   `account` varchar(50),
-  `password` varchar(32),
+  `pass` varchar(32),
   `role_id` int,
   `created_at` datetime,
   `updated_at` datetime

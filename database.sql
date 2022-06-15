@@ -11,6 +11,7 @@ CREATE TABLE `User` (
   `email` varchar(150),
   `phone_number` varchar(20),
   `address` varchar(200),
+  `account` varchar(50),
   `password` varchar(32),
   `role_id` int,
   `created_at` datetime,

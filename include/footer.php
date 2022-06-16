@@ -42,7 +42,7 @@
             </ul>
           </div>
           <div class="footer__container-row-subscribe">
-            <form>  
+            <form>
               <h5 class="footer__container-row-subscribe-title">Subscribe to our newsletter</h5>
               <p class="footer__container-row-subscribe-description">Monthly digest of what's new and exciting from us.</p>
               <div class="footer__container-row-subscribe-email">

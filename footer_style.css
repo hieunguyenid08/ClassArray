@@ -65,7 +65,7 @@
   .footer__container-row-section-item {
     font-size: 20px;
     margin-bottom: 8px;
-    color: var(--text-color);
+    color: var(--text-color-item-footer);
   }
   
   .footer__container-row-subscribe {
